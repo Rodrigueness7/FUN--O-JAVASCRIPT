@@ -1,0 +1,20 @@
+.bottom{
+    text-decoration: none;
+    position: relative;
+    margin-left: 20px;
+    left: 20vw;
+    top: 50vh;
+    background: #3399cc;
+    padding: 20px 40px 20px 40px;
+    color:white;
+    font-weight: bold;
+    border-radius: 15px;
+    font-size: 20px;
+    border: 8px solid;
+}
+
+.bottom:hover{
+    background:gray ;
+    color:white;
+
+}
