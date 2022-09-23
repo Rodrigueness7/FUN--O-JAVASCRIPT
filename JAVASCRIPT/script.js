@@ -27,6 +27,6 @@ function passou(media){
 
 for(var aluno of turma){
    
-   console.log(aluno.nome + " - " + aluno.media() + " - " +
+   console.log(" Nome do aluno - " + aluno.nome + " - Média - " + aluno.media() + " - Resultado - " +
    passou(aluno.media()));
 }
