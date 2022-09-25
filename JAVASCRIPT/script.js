@@ -1,32 +1,42 @@
-function criarAluno(nome,n1,n2){
-    return {
-        nome: nome,
-        nota1: n1,
-        nota2: n2,
+function createCandidate(name,n1,n2){
 
-        media: function(){
-            return (this.nota1 + this.nota2) /2;
-        }
+    this.name = name,
+    this.grade1 = n1,
+    this.grade2 = n2,
+
+    this.average = function(){
+        return (this.grade1 + this.grade2) /2;
     }
 }
-
-var turma = [
-    criarAluno("Samuel", 9, 8),
-    criarAluno("Danilo", 6, 7),
-]
-
-function passou(media){
-   
-    if( media > 7){
-        return "Aprovado"
+function passed(average){
+    if(average > 7){
+        return "APROVED"
     }
     else{
-        return "Reprovado"
+        return"DISAPPROVED"
     }
 }
+function handbang(average){
+    if(average == 10){
+        return " 100% "
+    }
+    else if(average > 9 && average < 10){
+        return " 90% "
+    }
+    else if(average > 8 && average < 9){
+        return " 80% "
+    }
+    else if(average > 7 && average < 8){
+        return " 70% "
+    }
+}
+var candidate = [
+    new createCandidate("Alex", 10, 9),
+    new createCandidate("Fabio", 8, 9)
+]
 
-for(var aluno of turma){
-   
-   console.log(" Nome do aluno - " + aluno.nome + " - Média - " + aluno.media() + " - Resultado - " +
-   passou(aluno.media()));
+for( var a of candidate){
+    console.log("Name - " + a.name + " - Average - " +
+    a.average() + " - Result - " + passed(a.average()) +
+    " - Handbang - " + handbang(a.average()))
 }
